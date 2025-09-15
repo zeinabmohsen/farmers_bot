@@ -1,9 +1,6 @@
 {
-  "functions": {
-    "api/**/*.js": { "runtime": "nodejs22.x" }
-  },
-  "rewrites": [
-    { "source": "/", "destination": "/api" },
-    { "source": "/webhook", "destination": "/api/webhook" }
+  "routes": [
+    { "src": "^/$", "dest": "/api" },
+    { "src": "^/webhook$", "dest": "/api/webhook" }
   ]
 }
