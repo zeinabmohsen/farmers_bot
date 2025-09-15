@@ -11,6 +11,7 @@ app.get("/", (_req, res) => res.send("OK"));
 // Webhook routes
 app.use("/webhook", webhookRouter);
 
+console.log("Webhook routes set up at /webhook");
 // Error handler (last)
 app.use((err, _req, res, _next) => {
   console.error("[ERROR]", err);
