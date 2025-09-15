@@ -1,6 +1,6 @@
 require("dotenv").config();
 const express = require("express");
-const webhookRouter = require("./routes/webhook.routes");
+const webhookRouter = require("./api/routes/webhook.routes");
 
 const app = express();
 app.use(express.json());
