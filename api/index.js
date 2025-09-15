@@ -20,10 +20,4 @@ app.use((err, _req, res, _next) => {
     .json({ ok: false, error: err.message || "Server error" });
 });
 
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-  console.log(`Server running on http://localhost:${PORT}`);
-  // Quick manual test: uncomment and put your own tester number
-  // const { sendText } = require('./services/whatsapp.service');
-  // sendText('96170059215', 'Hello World from server start!');
-});
+module.exports = (req, res) => app(req, res);
